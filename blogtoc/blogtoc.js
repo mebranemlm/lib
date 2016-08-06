@@ -34,6 +34,10 @@
    var postTitle = new Array();     // array of posttitles
    var postUrl = new Array();       // array of posturls
    var postDate = new Array();      // array of post publish dates
+
+   var months=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Setiembre','Octubre','Noviembre','Diciembre'];
+   var postMonth = new Array(); 
+   
    var postSum = new Array();       // array of post summaries
    var postLabels = new Array();    // array of post labels
 
@@ -74,6 +78,7 @@ function loadtoc(json) {
 
          // get the post date from the entry
             var postdate = entry.published.$t.substring(0,10);
+            var postmonth=postdate.split('-')[1];
 
          // get the post url from the entry
             var posturl;
@@ -106,7 +111,7 @@ function loadtoc(json) {
             var pll = '';
             if ("category" in entry) {
                for (var k = 0; k < entry.category.length; k++) {
-                  pll += '<a href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="Click here to select all posts with label \'' + entry.category[k].term + '\'">' + entry.category[k].term + '</a>,  ';
+                  pll += '<a href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="Mostrar entradas con la etiqueta \'' + entry.category[k].term + '\'">' + entry.category[k].term + '</a>,  ';
                }
             var l = pll.lastIndexOf(',');
             if (l != -1) { pll = pll.substring(0,l); }
@@ -115,6 +120,9 @@ function loadtoc(json) {
          // add the post data to the arrays
             postTitle.push(posttitle);
             postDate.push(postdate);
+
+            postMonth.push(postmonth);
+
             postUrl.push(posturl);
             postSum.push(postcontent);
             postLabels.push(pll);
@@ -168,6 +176,12 @@ function sortPosts(sortBy) {
       var temp = postDate[x];
       postDate[x] = postDate[y];
       postDate[y] = temp;
+
+      var temp = postMonth[x];
+      postMonth[x] = postMonth[y];
+      postMonth[y] = temp;
+
+
       var temp = postUrl[x];
       postUrl[x] = postUrl[y];
       postUrl[y] = temp;
@@ -183,7 +197,9 @@ function sortPosts(sortBy) {
       for (var j=i+1; j<postTitle.length; j++) {
          if (sortBy == "titleasc") { if (postTitle[i] > postTitle[j]) { swapPosts(i,j); } }
          if (sortBy == "titledesc") { if (postTitle[i] < postTitle[j]) { swapPosts(i,j); } }
-         if (sortBy == "dateoldest") { if (postDate[i] > postDate[j]) { swapPosts(i,j); } }
+         if (sortBy == "dateoldest") { 
+          if (postDate[i] > postDate[j]) { swapPosts(i,j); } 
+        }
          if (sortBy == "datenewest") { if (postDate[i] < postDate[j]) { swapPosts(i,j); } }
       }
    }
@@ -196,29 +212,30 @@ function displayToc(filter) {
    var numDisplayed = 0;
    var tocTable = '';
    var tocHead1 = 'TITULO DE ENTRADA';
-   var tocTool1 = 'Click to sort by title';
+   var tocTool1 = 'Ordenar por titulo';
    var tocHead2 = 'FECHA DE PUBLICACION';
-   var tocTool2 = 'Click to sort by date';
+   var tocHead21 = 'MES';
+   var tocTool2 = 'Ordenar por fecha';
    var tocHead3 = 'ETIQUETAS';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
-      tocTool1 += ' (descending)';
-      tocTool2 += ' (newest first)';
+      tocTool1 += ' (descendente)';
+      tocTool2 += ' (recientes primero)';
    }
    if (sortBy == "titledesc") { 
-      tocTool1 += ' (ascending)';
-      tocTool2 += ' (newest first)';
+      tocTool1 += ' (ascendente)';
+      tocTool2 += ' (recientes primero)';
    }
    if (sortBy == "dateoldest") { 
-      tocTool1 += ' (ascending)';
-      tocTool2 += ' (newest first)';
+      tocTool1 += ' (ascendente)';
+      tocTool2 += ' (recientes primero)';
    }
    if (sortBy == "datenewest") { 
-      tocTool1 += ' (ascending)';
-      tocTool2 += ' (oldest first)';
+      tocTool1 += ' (ascendente)';
+      tocTool2 += ' (antiguos primero)';
    }
    if (postFilter != '') {
-      tocTool3 = 'Click to show all posts';
+      tocTool3 = 'Mostrar todas las entradas';
    }
    tocTable += '<table>';
    tocTable += '<tr>';
@@ -228,18 +245,32 @@ function displayToc(filter) {
    tocTable += '<td class="toc-header-col2">';
    tocTable += '<a href="javascript:toggleDateSort();" title="' + tocTool2 + '">' + tocHead2 + '</a>';
    tocTable += '</td>';
+
+   tocTable += '<td class="toc-header-col21">';
+   tocTable += '<a href="javascript:toggleDateSort();" title="' + tocTool2 + '">' + tocHead21 + '</a>';
+   tocTable += '</td>';
+
    tocTable += '<td class="toc-header-col3">';
    tocTable += '<a href="javascript:allPosts();" title="' + tocTool3 + '">' + tocHead3 + '</a>';
    tocTable += '</td>';
    tocTable += '</tr>';
+
+   
+
    for (var i = 0; i < postTitle.length; i++) {
+    var postDay=postDate[i].split('-')[2];
+    var postMesNum=postDate[i].split('-')[1];
+    var postMes=months[postMesNum-1];
+    var postYear=postDate[i].split('-')[0];
+
+    // var clase_tr='clase_td';
       if (filter == '') {
-         tocTable += '<tr><td class="toc-entry-col1"><a href="' + postUrl[i] + '" title="' + postSum[i] + '">' + postTitle[i] + '</a></td><td class="toc-entry-col2">' + postDate[i] + '</td><td class="toc-entry-col3">' + postLabels[i] + '</td></tr>';
+         tocTable += '<tr class="clase_td"><td class="toc-entry-col1"><a href="' + postUrl[i] + '" title="' + postSum[i] + '">' + postTitle[i] + '</a></td><td class="toc-entry-col2">' + postDate[i] + '</td><td class="toc-entry-col21">' + postDay+' de '+postMes + ' de '+postYear + '</td><td class="toc-entry-col3">' + postLabels[i] + '</td></tr>';
          numDisplayed++;
       } else {
           z = postLabels[i].lastIndexOf(filter);
           if ( z!= -1) {
-             tocTable += '<tr><td class="toc-entry-col1"><a href="' + postUrl[i] + '" title="' + postSum[i] + '">' + postTitle[i] + '</a></td><td class="toc-entry-col2">' + postDate[i] + '</td><td class="toc-entry-col3">' + postLabels[i] + '</td></tr>';
+             tocTable += '<tr><td class="toc-entry-col1"><a href="' + postUrl[i] + '" title="' + postSum[i] + '">' + postTitle[i] + '</a></td><td class="toc-entry-col2">' + postDate[i] + '</td><td class="toc-entry-col21">' + postDay+' de '+postMes + ' '+postYear + '</td><td class="toc-entry-col3">' + postLabels[i] + '</td></tr>';
              numDisplayed++;
           }
         }
