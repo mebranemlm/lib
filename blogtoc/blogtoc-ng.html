@@ -18,7 +18,7 @@
 			<h3>ÍNDICE POR FECHA</h3>
 		Presiona Ctrl+F para buscar<br>
 		<span style="font-size: large;"><b>____________</b></span><br>
-		<input ng-model="filtro.title['$t']" class="form-control" type="search" placeholder="Buscar título" />
+		<input ng-model="busqueda" ng-keyup="buscar()" class="form-control" type="search" placeholder="Buscar título" />
 	</div>
 	<div class="col-sm-1"></div>
 </div>
@@ -43,8 +43,8 @@
 						</a>
 						</center>
 					</th>
-					<td>{{post.published["$t"] | date}}</td>
-					<td>{{post.updated["$t"] | date}}</td>
+					<td title="{{post.published['$t'] | date:'\'Publicado el\' EEEE d \'de\' MMMM \'de\' y \'a las\' h:mm:ss a':'UTC-5'}}">{{post.published["$t"] | date | uppercase}}</td>
+					<td title="{{post.updated['$t'] | date:'\'Actualizado el\' EEEE d \'de\' MMMM \'de\' y \'a las\' h:mm:ss a'}}">{{post.updated["$t"] | date | uppercase}}</td>
 					<td class="th_tag">
 						<a ng-click="filterByTag(tag)" class="etiqueta btn btn-default btn-xs" ng-repeat-start="(j, tag) in post.category"><i class="glyphicon glyphicon-tag"></i> {{tag.term | uppercase}}</a><br ng-show="{{j%3==2}}" ng-repeat-end/>
 					</td>
@@ -64,21 +64,11 @@
 	var json={};
 	function loadtoc(res){
 		json=res;
-		//console.log(json);
 	}
-
-	 // document.onload=function(){
-  //       var oculto=document.querySelector('#bp_toc');
-  //       oculto.classList.remove('oculto');
-  //       //   for (var i = 0; i < ocultos.length; i++) {
-  //       //     ocultos[i].classList.remove("oculto");
-  //       //   //ocultos[i].setAttribute('class',ocultos[i].getAttribute('class').replace('oculto',''));
-  //       // }
-  //     }
-	
 </script>
-<script type="text/javascript" src="https://ateismoparacristianos.blogspot.com/feeds/posts/default?max-results=500&alt=json-in-script&callback=loadtoc"></script>
+<script type="text/javascript" src="https://debuggernote.blogspot.com/feeds/posts/default?max-results=500&alt=json-in-script&callback=loadtoc"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script type="text/javascript" src="https://code.angularjs.org/1.5.8/i18n/angular-locale_es-es.js"></script>
 <script type="text/javascript" src="blogtoc-ng.js"></script>
 </body>
 </html>

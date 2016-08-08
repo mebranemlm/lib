@@ -24,6 +24,17 @@ angular.module('blogtoc', [])
         $scope.orderDire=!$scope.orderDire;
       }
 
+      $scope.buscar=function(){
+        $scope.filtro={
+          title:{
+            '$t':$scope.busqueda
+          },
+          category:{
+            term:$scope.busqueda
+          }
+        }
+      }
+
     document.getElementById('bp_toc').classList.remove('oculto');
 
     
