@@ -1,11 +1,11 @@
 table .etiqueta{
-	margin:5px;
+	margin:3px;
 	font-weight: bold !important;
 	font-family: Helvetica,Arial,sans-serif;
 }
 
 table{
-	text-align: center;
+	text-align: center !important;
 }
 
 table .post{
