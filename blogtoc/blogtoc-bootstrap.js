@@ -37,6 +37,10 @@
 
    var months=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Setiembre','Octubre','Noviembre','Diciembre'];
    var postMonth = new Array(); 
+
+    var btns=['danger','primary','success'];
+    var btn = btns[Math.floor(Math.random() * btns.length)];
+    var btn_cat = 'default';
    
    var postSum = new Array();       // array of post summaries
    var postLabels = new Array();    // array of post labels
@@ -111,7 +115,7 @@ function loadtoc(json) {
             var pll = '';
             if ("category" in entry) {
                for (var k = 0; k < entry.category.length; k++) {
-                  pll += '<a href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="Mostrar entradas con la etiqueta \'' + entry.category[k].term + '\'">' + entry.category[k].term + '</a>,  ';
+                  pll += '<a class="etiqueta btn btn-default btn-xs" href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="Mostrar entradas con la etiqueta \'' + entry.category[k].term + '\'"><i class="glyphicon glyphicon-tag"></i> ' + entry.category[k].term + '</a>';
                }
             var l = pll.lastIndexOf(',');
             if (l != -1) { pll = pll.substring(0,l); }
@@ -209,7 +213,7 @@ function sortPosts(sortBy) {
 
 function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
-   var btns=['info','primary','warning','danger','default'];
+
    var numDisplayed = 0;
    var tocTable = '';
    var tocHead1 = 'TITULO DE ENTRADA';
@@ -247,7 +251,7 @@ function displayToc(filter) {
    tocTable += '<a href="javascript:toggleDateSort();" title="' + tocTool2 + '">' + tocHead2 + '</a>';
    tocTable += '</th>';
 
-   tocTable += '<th class="toc-header-col21">';
+   tocTable += '<th class="toc-header-col21 oculto">';
    tocTable += '<a href="javascript:toggleDateSort();" title="' + tocTool2 + '">' + tocHead21 + '</a>';
    tocTable += '</th>';
 
@@ -263,15 +267,16 @@ function displayToc(filter) {
     var postMesNum=postDate[i].split('-')[1];
     var postMes=months[postMesNum-1];
     var postYear=postDate[i].split('-')[0];
-    var btn = btns[Math.floor(Math.random() * btns.length)];
+    var fecha=`${postDay} ${postMes.substring(0,3).toUpperCase()} ${postYear}`;
+    var fechaFormat=postDay+' de '+postMes + ' de '+postYear ;
     // var clase_tr='clase_td';
       if (filter == '') {
-         tocTable += '<tr class="clase_td"><td class="toc-entry-col1"><a class="btn btn-'+btn+'" href="' + postUrl[i] + '" title="' + postSum[i] + '">' + postTitle[i] + '</a></td><td class="toc-entry-col2">' + postDate[i] + '</td><td class="toc-entry-col21">' + postDay+' de '+postMes + ' de '+postYear + '</td><td class="toc-entry-col3">' + postLabels[i] + '</td></tr>';
+         tocTable += '<tr class="clase_td"><td class="toc-entry-col1"><a class="post" href="' + postUrl[i] + '" title="' + postSum[i] + '">' + postTitle[i] + `</a></td><td class="toc-entry-col2" title="${fechaFormat}">` + fecha + '</td><td class="toc-entry-col21 oculto">' + fechaFormat + '</td><td class="toc-entry-col3">' + postLabels[i] + '</td></tr>';
          numDisplayed++;
       } else {
           z = postLabels[i].lastIndexOf(filter);
           if ( z!= -1) {
-             tocTable += '<tr><td class="toc-entry-col1"><a href="' + postUrl[i] + '" title="' + postSum[i] + '">' + postTitle[i] + '</a></td><td class="toc-entry-col2">' + postDate[i] + '</td><td class="toc-entry-col21">' + postDay+' de '+postMes + ' '+postYear + '</td><td class="toc-entry-col3">' + postLabels[i] + '</td></tr>';
+             tocTable += '<tr><td class="toc-entry-col1"><a class="post" href="' + postUrl[i] + '" title="' + postSum[i] + '">' + postTitle[i] + `</a></td><td class="toc-entry-col2" title="${fechaFormat}">` +fecha+ '</td><td class="toc-entry-col21 oculto">' + fechaFormat+ '</td><td class="toc-entry-col3">' + postLabels[i] + '</td></tr>';
              numDisplayed++;
           }
         }
