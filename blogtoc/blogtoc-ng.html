@@ -22,9 +22,9 @@ Presiona Ctrl+F para buscar<br>
 				<th>Título</th>
 				<th>Publicado</th>
 				<th>Actualizado</th>
-				<th>Categorías</th>
+				<th><a href="" ng-click="showAll()">Categorías</a></th>
 			</tr>
-			<tr  ng-repeat="(i, post) in posts">
+			<tr  ng-repeat="(i, post) in posts | filter: filtro">
 				<td>
 					<a href="{{post.link[4].href}}">
 						{{post.title['$t']}}
@@ -33,7 +33,7 @@ Presiona Ctrl+F para buscar<br>
 				<td>{{post.published["$t"] | date}}</td>
 				<td>{{post.updated["$t"] | date}}</td>
 				<td>
-					<a class="etiqueta btn btn-default btn-xs" ng-repeat-start="(j, category) in post.category"><i class="glyphicon glyphicon-tag"></i> {{category.term}}</a><br ng-show="{{j%3==2}}" ng-repeat-end/>
+					<a ng-click="filterByTag(tag)" class="etiqueta btn btn-default btn-xs" ng-repeat-start="(j, tag) in post.category"><i class="glyphicon glyphicon-tag"></i> {{tag.term}}</a><br ng-show="{{j%3==2}}" ng-repeat-end/>
 				</td>
 			</tr>
 		</table>
