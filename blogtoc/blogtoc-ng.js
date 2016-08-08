@@ -19,8 +19,8 @@ angular.module('blogtoc', [])
         $scope.filtro={}
       }
 
-      $scope.orderByTitle=function(){
-        $scope.orderProp='title';
+      $scope.ordenarPor=function(orden){
+        $scope.orderProp=orden;
         $scope.orderDire=!$scope.orderDire;
       }
     
