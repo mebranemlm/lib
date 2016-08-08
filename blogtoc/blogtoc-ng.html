@@ -43,10 +43,18 @@
 						</a>
 						</center>
 					</th>
-					<td title="{{post.published['$t'] | date:'\'Publicado el\' EEEE d \'de\' MMMM \'de\' y \'a las\' h:mm:ss a':'UTC-5'}}">{{post.published["$t"] | date | uppercase}}</td>
-					<td title="{{post.updated['$t'] | date:'\'Actualizado el\' EEEE d \'de\' MMMM \'de\' y \'a las\' h:mm:ss a'}}">{{post.updated["$t"] | date | uppercase}}</td>
+					<td title="{{post.published['$t'] | date:'\'Publicado el\' EEEE d \'de\' MMMM \'de\' y \'a las\' h:mm:ss a':'UTC-5'}}">
+						{{post.published["$t"] | date: 'd/MMM/y' | uppercase}}
+					</td>
+					<td title="{{post.updated['$t'] | date:'\'Actualizado el\' EEEE d \'de\' MMMM \'de\' y \'a las\' h:mm:ss a'}}">
+						{{post.updated["$t"] | date | uppercase}}
+					</td>
 					<td class="th_tag">
-						<a ng-click="filterByTag(tag)" class="etiqueta btn btn-default btn-xs" ng-repeat-start="(j, tag) in post.category"><i class="glyphicon glyphicon-tag"></i> {{tag.term | uppercase}}</a><br ng-show="{{j%3==2}}" ng-repeat-end/>
+						<a ng-click="filterByTag(tag)" class="etiqueta btn btn-default btn-xs" ng-repeat-start="(j, tag) in post.category">
+							<i class="glyphicon glyphicon-tag"></i> 
+							{{tag.term | uppercase}}
+						</a>
+						<br ng-show="{{j%3==2}}" ng-repeat-end/>
 					</td>
 				</tr>
 			</tbody>
