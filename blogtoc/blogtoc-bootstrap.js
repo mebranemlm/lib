@@ -237,22 +237,22 @@ function displayToc(filter) {
    if (postFilter != '') {
       tocTool3 = 'Mostrar todas las entradas';
    }
-   tocTable += '<table>';
+   tocTable += '<table class="table table-hover table-striped">';
    tocTable += '<tr>';
-   tocTable += '<td class="toc-header-col1">';
+   tocTable += '<th class="toc-header-col1">';
    tocTable += '<a href="javascript:toggleTitleSort();" title="' + tocTool1 + '">' + tocHead1 + '</a>';
-   tocTable += '</td>';
-   tocTable += '<td class="toc-header-col2">';
+   tocTable += '</th>';
+   tocTable += '<th class="toc-header-col2">';
    tocTable += '<a href="javascript:toggleDateSort();" title="' + tocTool2 + '">' + tocHead2 + '</a>';
-   tocTable += '</td>';
+   tocTable += '</th>';
 
-   tocTable += '<td class="toc-header-col21">';
+   tocTable += '<th class="toc-header-col21">';
    tocTable += '<a href="javascript:toggleDateSort();" title="' + tocTool2 + '">' + tocHead21 + '</a>';
-   tocTable += '</td>';
+   tocTable += '</th>';
 
-   tocTable += '<td class="toc-header-col3">';
+   tocTable += '<th class="toc-header-col3">';
    tocTable += '<a href="javascript:allPosts();" title="' + tocTool3 + '">' + tocHead3 + '</a>';
-   tocTable += '</td>';
+   tocTable += '</th>';
    tocTable += '</tr>';
 
    
