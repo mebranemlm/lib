@@ -1,6 +1,9 @@
 angular.module('blogtoc', [])
 .controller('btcontroller', ['$scope', function($scope){
-  loadtoc(json){
-    $scope.posts=json.feed.entry;
-  }
+  // window.onload=function(){
+    
+      $scope.posts=json.feed.entry;
+      console.log($scope.posts.length);
+    
+  // }
 }])
