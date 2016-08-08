@@ -4,6 +4,7 @@ angular.module('blogtoc', [])
       $scope.filtro={};
       $scope.orderProp='title';
       $scope.orderDire=true;
+
       $scope.posts=json.feed.entry;
       //console.log($scope.posts.length);
       
@@ -22,6 +23,7 @@ angular.module('blogtoc', [])
       $scope.ordenarPor=function(orden){
         $scope.orderProp=orden;
         $scope.orderDire=!$scope.orderDire;
+        $scope.strDire= $scope.orderDire ? 'descendente': 'ascendente';
       }
 
       $scope.buscar=function(){
