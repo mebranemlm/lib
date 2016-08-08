@@ -69,7 +69,7 @@ function loadtoc(json) {
          var nextjsoncall = document.createElement('script');
          nextjsoncall.type = 'text/javascript';
          startindex=totalEntires+1;
-         nextjsoncall.setAttribute("src", "/feeds/posts/summary?start-index=" + startindex + "&max-results=500&alt=json-in-script&callback=loadtoc");
+         nextjsoncall.setAttribute("src", "https://ateismoparacristianos.blogspot.com/feeds/posts/summary?start-index=" + startindex + "&max-results=500&alt=json-in-script&callback=loadtoc");
          tocdiv.appendChild(nextjsoncall);
          }
       // main loop gets all the entries from the feed
