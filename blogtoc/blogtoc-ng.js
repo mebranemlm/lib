@@ -36,7 +36,8 @@ angular.module('blogtoc', [])
         console.log($scope.filtro);
       }
 
-    document.getElementById('bp_toc').classList.remove('oculto');
+    //document.getElementById('bp_toc').classList.remove('oculto');
+    angular.element(document.getElementById('bp_toc')).removeClass('oculto');
 
     
 }])
