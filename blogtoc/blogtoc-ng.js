@@ -23,8 +23,13 @@ angular.module('blogtoc', [])
         $scope.orderProp=orden;
         $scope.orderDire=!$scope.orderDire;
       }
-    
-  // }
+
+      document.onload=function(){
+        var ocultos=document.querySelectorAll('.oculto');
+          for (var i = 0; i < ocultos.length; i++) {
+          ocultos[i].setAttribute('class',ocultos[i].getAttribute('class').replace('oculto',''));
+        }
+      }
 }])
 .filter('orderObjectBy', function() {
   return function(items, field, reverse) {
