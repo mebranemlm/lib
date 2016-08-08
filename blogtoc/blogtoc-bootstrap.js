@@ -237,7 +237,7 @@ function displayToc(filter) {
    if (postFilter != '') {
       tocTool3 = 'Mostrar todas las entradas';
    }
-   tocTable += '<table class="table table-hover table-striped">';
+   tocTable += '<div class="row"><div class="col-sm-1"></div><div class="col-sm-10"><table class="table table-hover table-striped">';
    tocTable += '<tr>';
    tocTable += '<th class="toc-header-col1">';
    tocTable += '<a href="javascript:toggleTitleSort();" title="' + tocTool1 + '">' + tocHead1 + '</a>';
@@ -275,7 +275,7 @@ function displayToc(filter) {
           }
         }
    }
-   tocTable += '</table>';
+   tocTable += '</table></div><div class="col-sm-1"></div></div>';
    if (numDisplayed == postTitle.length) {
       var tocNote = '<span class="toc-note">Mostrando ' + postTitle.length + ' entradas<br/></span>'; }
    else {
