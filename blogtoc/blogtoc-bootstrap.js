@@ -209,6 +209,7 @@ function sortPosts(sortBy) {
 
 function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
+   var btns=['info','primary','warning','danger','default'];
    var numDisplayed = 0;
    var tocTable = '';
    var tocHead1 = 'TITULO DE ENTRADA';
@@ -262,10 +263,10 @@ function displayToc(filter) {
     var postMesNum=postDate[i].split('-')[1];
     var postMes=months[postMesNum-1];
     var postYear=postDate[i].split('-')[0];
-
+    var btn = btns[Math.floor(Math.random() * btns.length)];
     // var clase_tr='clase_td';
       if (filter == '') {
-         tocTable += '<tr class="clase_td"><td class="toc-entry-col1"><a href="' + postUrl[i] + '" title="' + postSum[i] + '">' + postTitle[i] + '</a></td><td class="toc-entry-col2">' + postDate[i] + '</td><td class="toc-entry-col21">' + postDay+' de '+postMes + ' de '+postYear + '</td><td class="toc-entry-col3">' + postLabels[i] + '</td></tr>';
+         tocTable += '<tr class="clase_td"><td class="toc-entry-col1"><a class="btn btn-'+btn+'" href="' + postUrl[i] + '" title="' + postSum[i] + '">' + postTitle[i] + '</a></td><td class="toc-entry-col2">' + postDate[i] + '</td><td class="toc-entry-col21">' + postDay+' de '+postMes + ' de '+postYear + '</td><td class="toc-entry-col3">' + postLabels[i] + '</td></tr>';
          numDisplayed++;
       } else {
           z = postLabels[i].lastIndexOf(filter);
