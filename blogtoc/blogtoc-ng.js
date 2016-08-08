@@ -2,24 +2,26 @@ angular.module('blogtoc', [])
 .controller('btcontroller', ['$scope', function($scope){
   // window.onload=function(){
       $scope.filtro={};
+      $scope.orderProp={};
+      $scope.orderDire=true;
       $scope.posts=json.feed.entry;
       //console.log($scope.posts.length);
       
       $scope.filterByTag=function(tag){
-        // var aux={
-        //  // scheme:tag.scheme,
-        //   term:tag.term
-        // }
         $scope.filtro={ 
           category: {
             term:tag.term
           }
         }
-       // console.log(aux);
       }
 
       $scope.showAll=function(){
         $scope.filtro={}
+      }
+
+      $scope.orderByTitle=function(){
+        $scope.orderProp='title';
+        $scope.orderDire=!$scope.orderDire;
       }
     
   // }
