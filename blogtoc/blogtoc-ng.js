@@ -3,7 +3,7 @@ angular.module('blogtoc', [])
   // window.onload=function(){
     
       $scope.posts=json.feed.entry;
-      console.log($scope.posts.length);
+      //console.log($scope.posts.length);
     
   // }
 }])
