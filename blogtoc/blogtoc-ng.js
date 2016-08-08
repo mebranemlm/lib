@@ -25,14 +25,15 @@ angular.module('blogtoc', [])
       }
 
       $scope.buscar=function(){
-        $scope.filtro={
-          title:{
-            '$t':$scope.busqueda
-          },
-          category:{
-            term:$scope.busqueda
-          }
+        $scope.filtro.category={
+            term:angular.copy($scope.busqueda)
         }
+
+        $scope.filtro.title={
+          $t:angular.copy($scope.busqueda)
+        }
+
+        console.log($scope.filtro);
       }
 
     document.getElementById('bp_toc').classList.remove('oculto');
