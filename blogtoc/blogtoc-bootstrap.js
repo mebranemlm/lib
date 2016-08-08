@@ -113,9 +113,15 @@ function loadtoc(json) {
 
          // get the post labels from the entry
             var pll = '';
+            var j=0;
             if ("category" in entry) {
                for (var k = 0; k < entry.category.length; k++) {
+                j++;
                   pll += '<a class="etiqueta btn btn-default btn-xs" href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="Mostrar entradas con la etiqueta \'' + entry.category[k].term + '\'"><i class="glyphicon glyphicon-tag"></i> ' + entry.category[k].term + '</a>';
+                  if(j==3){
+                    pll+='<br/>';
+                    j=0;
+                  }
                }
             var l = pll.lastIndexOf(',');
             if (l != -1) { pll = pll.substring(0,l); }
