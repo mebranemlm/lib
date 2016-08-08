@@ -21,7 +21,7 @@ Presiona Ctrl+F para buscar<br>
 			<tr>
 				<th><a href="" ng-click="ordenarPor('title')">Título</a></th>
 				<th><a href="" ng-click="ordenarPor('published')">Publicado</a></th>
-				<th>Actualizado</th>
+				<th><a href="" ng-click="ordenarPor('updated')">Actualizado</a></th>
 				<th><a href="" ng-click="showAll()">Categorías</a></th>
 			</tr>
 			<tr  ng-repeat="(i, post) in posts | filter: filtro | orderBy:orderProp:orderDire">
