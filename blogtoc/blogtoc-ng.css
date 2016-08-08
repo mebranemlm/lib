@@ -2,4 +2,12 @@
 	display:none;
 }
 
+.th_title{
+	max-width: 500px !important;
+	overflow: hidden;
+}
 
+.th_tag{
+	max-width: 300px !important;
+	overflow: hidden;
+}

@@ -29,15 +29,15 @@
 		<table class="table table-striped table-hover">
 			<thead>
 				<tr>
-					<th><center><a href="" ng-click="ordenarPor('title')">TÍTULO</a></center></th>
+					<th class="th_title"><center><a href="" ng-click="ordenarPor('title')">TÍTULO</a></center></th>
 					<th><center><a href="" ng-click="ordenarPor('published')">PUBLICADO</a></center></th>
 					<th><center><a href="" ng-click="ordenarPor('updated')">ACTUALIZADO</a></center></th>
-					<th><center><a href="" ng-click="showAll()">CATEGORÍAS</a></center></th>
+					<th class="th_tag"><center><a href="" ng-click="showAll()">CATEGORÍAS</a></center></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr  ng-repeat="(i, post) in posts | filter: filtro | orderBy:orderProp:orderDire">
-					<th><center>
+					<th class="th_title"><center>
 						<a href="{{post.link[4].href}}">
 							{{post.title['$t']}}
 						</a>
@@ -45,7 +45,7 @@
 					</th>
 					<td>{{post.published["$t"] | date}}</td>
 					<td>{{post.updated["$t"] | date}}</td>
-					<td>
+					<td class="th_tag">
 						<a ng-click="filterByTag(tag)" class="etiqueta btn btn-default btn-xs" ng-repeat-start="(j, tag) in post.category"><i class="glyphicon glyphicon-tag"></i> {{tag.term | uppercase}}</a><br ng-show="{{j%3==2}}" ng-repeat-end/>
 					</td>
 				</tr>
