@@ -24,12 +24,9 @@ angular.module('blogtoc', [])
         $scope.orderDire=!$scope.orderDire;
       }
 
-      document.onload=function(){
-        var ocultos=document.querySelectorAll('.oculto');
-          for (var i = 0; i < ocultos.length; i++) {
-          ocultos[i].setAttribute('class',ocultos[i].getAttribute('class').replace('oculto',''));
-        }
-      }
+    document.getElementById('bp_toc').classList.remove('oculto');
+
+    
 }])
 .filter('orderObjectBy', function() {
   return function(items, field, reverse) {
