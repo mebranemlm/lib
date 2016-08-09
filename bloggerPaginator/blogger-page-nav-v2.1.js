@@ -14,7 +14,7 @@ function showpageCount(json) {
     console.log(home_page_url);
     for (var i = 0, post; post = json.feed.entry[i]; i++) {
     	console.log(i);
-        var timestamp1 = post.published.$t.substring(0, 19) + post.published.$t.substring(23, 29);
+        var timestamp1 = post.updated.$t.substring(0, 19) + post.updated.$t.substring(23, 29);
         // var timestamp1=post.published.$t;
          // console.log(post.published.$t.substring(0, 19));
          // console.log(post.published.$t.substring(23,29));
