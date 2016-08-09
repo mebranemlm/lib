@@ -14,14 +14,14 @@ function showpageCount(json) {
     console.log(home_page_url);
     for (var i = 0, post; post = json.feed.entry[i]; i++) {
     	console.log(i);
-        var timestamp1 = post.updated.$t.substring(0, 19) + post.updated.$t.substring(23, 29);
+        var timestamp1 = post.published.$t.substring(0, 19) + post.published.$t.substring(23, 29);
         // var timestamp1=post.published.$t;
          // console.log(post.published.$t.substring(0, 19));
          // console.log(post.published.$t.substring(23,29));
          console.log('fcomp: '+post.published.$t);
          console.log('ts: '+timestamp1);
         timestamp = encodeURIComponent(timestamp1);
-        console.log(timestamp);
+        //console.log(timestamp);
         var title = post.title.$t;
         if (title != '') {
             if (itemCount == 0 || (itemCount % pageCount == (pageCount - 1))) {
