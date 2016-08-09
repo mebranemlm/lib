@@ -68,8 +68,10 @@
 					</td>
 					<td class="th_tag">
 						<a ng-click="filterByTag(tag)" class="etiqueta btn btn-default btn-xs" ng-repeat-start="(j, tag) in post.category">
-							<i class="glyphicon glyphicon-tag"></i> 
-							{{tag.term | uppercase}}
+							<small><b>
+								<i class="glyphicon glyphicon-tag"></i> 
+								{{tag.term | uppercase}}
+							</b></small>
 						</a>
 						<br ng-show="{{j%3==2}}" ng-repeat-end/>
 					</td>
