@@ -23,6 +23,18 @@ function showpageCount(json) {
     	// 	dpost.setMilliseconds(1000);
     	// 	dpost=new Date(dpost);
     	// }
+    	
+    	function addZero(num){
+    		var temp=`0${num}`;
+    		temp=temp.substr(temp.length-2,temp.length);
+    		return temp;
+    	}
+
+    	var tz=new Date().getTimezoneOffset();
+		var tzHour=addZero(Math.floor(tz/60));
+    	var tzMin=addZero(tz%60);
+    	strTz=`-${tzHour}:${tzMin}`;
+
     	var mes=`0${dpost.getMonth()+1}`;
     	var dia=`0${dpost.getDate()}`;
     	//var dia=`0${dpost.getDay()}`;
@@ -36,7 +48,7 @@ function showpageCount(json) {
     	min=min.substr(min.length-2,min.length);
     	sec=sec.substr(sec.length-2,sec.length);
 
-    	var timestamp1=`${dpost.getFullYear()}-${mes}-${dia}T${hora}:${min}:${sec}${fpost.substr(23,29)}`;
+    	var timestamp1=`${dpost.getFullYear()}-${mes}-${dia}T${hora}:${min}:${sec}${strTz}`;
     	//var timestamp1=`${fpost.substr(0,17)}${sec}${fpost.substr(23,29)}`;
         //var timestamp1 = post.published.$t.substring(0, 17)+res + post.published.$t.substring(23, 29);
         // var timestamp1=post.published.$t;
