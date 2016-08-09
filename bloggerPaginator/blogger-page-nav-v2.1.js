@@ -16,11 +16,13 @@ function showpageCount(json) {
     	console.log(i);
     	var fpost=post.published.$t;
     	var dpost=new Date(fpost);
-    	var miliseconds=dpost.getMilliseconds();
-    	if(dpost.getMilliseconds()>0){
-    		dpost.setMilliseconds(1000);
-    		dpost=new Date(dpost);
-    	}
+    	dpost.setMilliseconds(1000);
+    	dpost=new Date(dpost);
+    	// var miliseconds=dpost.getMilliseconds();
+    	// if(dpost.getMilliseconds()>0){
+    	// 	dpost.setMilliseconds(1000);
+    	// 	dpost=new Date(dpost);
+    	// }
     	var mes=`0${dpost.getMonth()+1}`;
     	var dia=`0${dpost.getDay()}`;
     	//var dia=`0${dpost.getDay()}`;
