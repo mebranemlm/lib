@@ -1,5 +1,5 @@
 angular.module('blogtoc', [])
-.controller('btcontroller', ['$scope', function($scope){
+.controller('btcontroller', ['$scope','orderObjectBy', function($scope,orderObjectBy){
   // window.onload=function(){
       $scope.filtro={};
       $scope.orderProp='title';
@@ -24,6 +24,14 @@ angular.module('blogtoc', [])
         $scope.orderProp=orden;
         $scope.orderDire=!$scope.orderDire;
         $scope.strDire= $scope.orderDire ? 'descendente': 'ascendente';
+
+        if(orden=='title'){
+          //angular.filter('filterObjectBy')($scope.posts, '$t', $scope.orderDire);
+          var ordenado=orderObjectBy($scope.posts, '$t', $scope.orderDire);
+          //console.log(ordenado.length,ordenado);
+          $scope.posts=[];
+          $scope.posts=ordenado;
+        }
       }
 
       $scope.buscar=function(){
@@ -35,7 +43,7 @@ angular.module('blogtoc', [])
           $t:angular.copy($scope.busqueda)
         }
 
-        console.log($scope.filtro);
+        //console.log($scope.filtro);
       }
 
     //document.getElementById('bp_toc').classList.remove('oculto');
@@ -43,16 +51,40 @@ angular.module('blogtoc', [])
 
     
 }])
-.filter('orderObjectBy', function() {
-  return function(items, field, reverse) {
-    var filtered = [];
-    angular.forEach(items, function(item) {
-      filtered.push(item);
-    });
+.factory('orderObjectBy', function(){
+  var filtered=[];
+  var orderObjectBy=function(items, field, reverse){
+    // angular.forEach(items, function(item) {
+    //   filtered.push(item);
+    // });
+    filtered=items;
     filtered.sort(function (a, b) {
-      return (a[field] > b[field] ? 1 : -1);
+      return (a.title[field] > b.title[field] ? 1 : -1);
     });
-    if(reverse) filtered.reverse();
+    // filtered.sort(function (a, b) {
+    //   return (a.title[field] > b.title[field] ? 1 : -1);
+    // });
+    //console.log(reverse);
+    console.log(filtered[0].title.$t);
+    if(reverse) {
+     filtered.reverse();
+    
+    }
+    console.log(filtered[0].title.$t);
     return filtered;
-  };
-});
+  }
+  return (orderObjectBy);
+})
+// .filter('orderObjectBy', function() {
+//   return function(items, field, reverse) {
+//     var filtered = [];
+//     angular.forEach(items, function(item) {
+//       filtered.push(item);
+//     });
+//     filtered.sort(function (a, b) {
+//       return (a[field] > b[field] ? 1 : -1);
+//     });
+//     if(reverse) filtered.reverse();
+//     return filtered;
+//   };
+// });
