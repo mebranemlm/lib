@@ -31,22 +31,26 @@
 				<tr>
 					<th class="th_title">
 						<center>
-							<a href="" ng-click="ordenarPor('title.$t')" title="Ordenar por título ({{strDire}})">TÍTULO</a>
+							<a href="" class="btn btn-default" ng-click="ordenarPor('title.$t')" title="Ordenar por título ({{strDire}})">
+							<i class="{{glyphicon['title.$t']}}"></i> TÍTULO</a>
+						</center>
+					</th>
+					<th>
+						
+						<center>
+							<a href="" class="btn btn-default" ng-click="ordenarPor('published.$t')" title="Ordenar por fecha de publicación ({{strDire}})">
+							<i class="{{glyphicon['published.$t']}}"></i> PUBLICADO</a>
 						</center>
 					</th>
 					<th>
 						<center>
-							<a href="" ng-click="ordenarPor('published.$t')" title="Ordenar por fecha de publicación ({{strDire}})">PUBLICADO</a>
-						</center>
-					</th>
-					<th>
-						<center>
-							<a href="" ng-click="ordenarPor('updated.$t')" title="Ordenar por fecha de actualización ({{strDire}})">ACTUALIZADO</a>
+							<a href="" class="btn btn-default" ng-click="ordenarPor('updated.$t')" title="Ordenar por fecha de actualización ({{strDire}})">
+							<i class="{{glyphicon['updated.$t']}}"></i> ACTUALIZADO</a>
 						</center>
 					</th>
 					<th class="th_tag">
 						<center>
-							<a href="" ng-click="showAll()" title="Mostrar todas las categorías">CATEGORÍAS</a>
+							<a href="" class="btn btn-default" ng-click="showAll()" title="Mostrar todas las categorías">CATEGORÍAS</a>
 						</center>
 					</th>
 				</tr>

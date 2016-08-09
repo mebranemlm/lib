@@ -4,7 +4,7 @@ angular.module('blogtoc', [])
       $scope.posts=json.feed.entry;
       $scope.filtro={};
       $scope.orderDire=true;
-   
+      $scope.glyphicon={};
       
       $scope.filterByTag=function(tag){
         $scope.filtro={ 
@@ -22,6 +22,9 @@ angular.module('blogtoc', [])
         $scope.orderProp=orden;
         $scope.orderDire=!$scope.orderDire;
         $scope.strDire= $scope.orderDire ? 'ascendente': 'descendente';
+        var menu = $scope.orderDire ? 'up': 'down';
+        $scope.glyphicon={};
+        $scope.glyphicon[orden]=`glyphicon glyphicon-chevron-${menu}`;
       }
 
       $scope.buscar=function(){
