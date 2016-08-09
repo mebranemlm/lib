@@ -21,7 +21,7 @@ function showpageCount(json) {
     		dpost.setMilliseconds(1000);
     		dpost=new Date(dpost);
     	}
-    	var mes=`0${dpost.getMonth()}`;
+    	var mes=`0${dpost.getMonth()+1}`;
     	var dia=`0${dpost.getDay()}`;
     	//var dia=`0${dpost.getDay()}`;
     	var hora=`0${dpost.getHours()}`;
