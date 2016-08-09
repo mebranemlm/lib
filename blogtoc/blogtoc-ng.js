@@ -1,12 +1,10 @@
 angular.module('blogtoc', [])
 .controller('btcontroller', ['$scope','orderObjectBy', function($scope,orderObjectBy){
-  // window.onload=function(){
+      //Initial values
+      $scope.posts=json.feed.entry;
       $scope.filtro={};
       $scope.orderProp='title';
       $scope.orderDire=true;
-
-      $scope.posts=json.feed.entry;
-      //console.log($scope.posts.length);
       
       $scope.filterByTag=function(tag){
         $scope.filtro={ 
@@ -26,11 +24,7 @@ angular.module('blogtoc', [])
         $scope.strDire= $scope.orderDire ? 'descendente': 'ascendente';
 
         if(orden=='title'){
-          //angular.filter('filterObjectBy')($scope.posts, '$t', $scope.orderDire);
-          var ordenado=orderObjectBy($scope.posts, '$t', $scope.orderDire);
-          //console.log(ordenado.length,ordenado);
-          $scope.posts=[];
-          $scope.posts=ordenado;
+          $scope.posts=angular.copy(orderObjectBy($scope.posts, '$t', $scope.orderDire));
         }
       }
 
@@ -52,28 +46,19 @@ angular.module('blogtoc', [])
     
 }])
 .factory('orderObjectBy', function(){
-  var filtered=[];
-  var orderObjectBy=function(items, field, reverse){
-    // angular.forEach(items, function(item) {
-    //   filtered.push(item);
-    // });
-    filtered=items;
+  
+  var fn=function(items, field, reverse){
+    var filtered=[];
+    filtered=angular.copy(items);
     filtered.sort(function (a, b) {
       return (a.title[field] > b.title[field] ? 1 : -1);
     });
-    // filtered.sort(function (a, b) {
-    //   return (a.title[field] > b.title[field] ? 1 : -1);
-    // });
-    //console.log(reverse);
-    console.log(filtered[0].title.$t);
-    if(reverse) {
-     filtered.reverse();
     
-    }
-    console.log(filtered[0].title.$t);
+    if(reverse) filtered.slice().reverse();
+    
     return filtered;
   }
-  return (orderObjectBy);
+  return (fn);
 })
 // .filter('orderObjectBy', function() {
 //   return function(items, field, reverse) {
