@@ -18,8 +18,8 @@ function showpageCount(json) {
         // var timestamp1=post.published.$t;
          // console.log(post.published.$t.substring(0, 19));
          // console.log(post.published.$t.substring(23,29));
-         console.log('fcomp: '+post.published.$t);
-         console.log('ts: '+timestamp1);
+         console.log(post.published.$t);
+         console.log(timestamp1);
         timestamp = encodeURIComponent(timestamp1);
         //console.log(timestamp);
         var title = post.title.$t;
