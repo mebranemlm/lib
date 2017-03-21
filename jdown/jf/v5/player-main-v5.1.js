@@ -707,19 +707,20 @@ var CryptoJSAesJson = {
     }
 }
 
+var _password= password || "avcms.co";
 function des(encrypted) {
     if (!encrypted.length) return encrypted;
 	//password = avcms.co
-    return JSON.parse(CryptoJS.AES.decrypt(encrypted, password, {
+    return JSON.parse(CryptoJS.AES.decrypt(encrypted, _password, {
         format: CryptoJSAesJson
     }).toString(CryptoJS.enc.Utf8));
 }
 vstr = des(vstr);
-astr = des(astr);
-fstr = des(fstr);
+//astr = des(astr);
+//fstr = des(fstr);
 
 
-_vstr=JSON.parse(vstr);
+var _vstr=JSON.parse(vstr);
 
 
 var _url=_vstr[0].file;
