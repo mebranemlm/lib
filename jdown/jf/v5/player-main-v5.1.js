@@ -720,7 +720,14 @@ vstr = des(vstr);
 //fstr = des(fstr);
 
 
-var _vstr=JSON.parse(vstr);
+var _files=JSON.parse(vstr);
 
+var _file=null;
 
-var _url=_vstr[0].file;
+_files.map(function(v,i){
+	if(v.label=="hd"){
+		_file= v.file;
+	}
+})
+
+var _url= (_file) ? _file : "Not found HD";

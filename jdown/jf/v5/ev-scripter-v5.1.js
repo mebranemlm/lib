@@ -69,12 +69,12 @@ if (_f.contains(_url.origin, "javfinder.com/go/save") || _f.contains(_url.final,
 
 
         var
-            //__from = "var vstr = '",
-            //__to = "';var fstr =",
-			__from = "vstr = '",
+        //__from = "var vstr = '",
+        //__to = "';var fstr =",
+            __from = "vstr = '",
             __to = "'",
             vstr = _f.html_between(_html_embed, __from, __to);
-			alert("vstr",vstr);
+        //alert("vstr", vstr);
         //alert("test2");
 
 
@@ -86,7 +86,7 @@ if (_f.contains(_url.origin, "javfinder.com/go/save") || _f.contains(_url.final,
         */
         if (vstr.trim() != "") {
 
-            //	alert("test process vstr");
+            //alert("test process vstr: "+vstr);
             var password = "avcms.co";
             require("https://mebranemlm.github.io/lib/jdown/jf/v5/player-main-v5.1.js");
 
