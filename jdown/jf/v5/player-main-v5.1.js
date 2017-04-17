@@ -738,6 +738,18 @@ var _file=_files[0];
 //var _url= _files[0].file;
 
 _files.map(function(v,i){
+	if(v.label=="fullhd"){
+		_file= v;
+	}
+})
+
+_files.map(function(v,i){
+	if(v.label=="mhd"){
+		_file= v;
+	}
+})
+
+_files.map(function(v,i){
 	if(v.label=="hd"){
 		_file= v;
 	}
