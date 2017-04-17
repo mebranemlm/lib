@@ -723,7 +723,7 @@ vstr = des(vstr);
 var _files=JSON.parse(vstr);
 
 //var _file=null;
-var _file=_files[0].file;
+/*var _file=_files[0].file;
 
 _files.map(function(v,i){
 	if(v.label=="hd"){
@@ -732,3 +732,15 @@ _files.map(function(v,i){
 })
 
 var _url= (_file) ? _file : "Not found";
+*/
+
+var _file=_files[0];
+//var _url= _files[0].file;
+
+_files.map(function(v,i){
+	if(v.label=="hd"){
+		_file= v;
+	}
+})
+
+var _url= (_file.file) ? _file +"&label="+_file.label + "&arraysize="+_files.length : "Not found";
