@@ -743,4 +743,4 @@ _files.map(function(v,i){
 	}
 })
 
-var _url= (_file.file) ? _file +"&label="+_file.label + "&arraysize="+_files.length : "Not found";
+var _url= (_file.file) ? _file.file +"&label="+_file.label + "&arraysize="+_files.length : "Not found";
