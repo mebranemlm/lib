@@ -1,5 +1,7 @@
 
 
+   var posts=[];
+
    var postTitle = new Array();     // array of posttitles
    var postUrl = new Array();       // array of posturls
    var postDate = new Array();      // array of post publish dates
@@ -82,11 +84,22 @@ function loadtoc(json) {
             }
 
          // add the post data to the arrays
+			
+			var post={
+				title:posttitle,
+				date:postdate,
+				url:posturl,
+				sum:postcontent,
+				labels:pll
+			};
+			posts.push(post);
+			/*
             postTitle.push(posttitle);
             postDate.push(postdate);
             postUrl.push(posturl);
             postSum.push(postcontent);
             postLabels.push(pll);
+			*/
          }
       }
       if(totalEntires==totalPosts) {tocLoaded=true;showToc();}
@@ -228,7 +241,7 @@ function toggleTitleSort() {
    else { sortBy = "titleasc"; }
    sortPosts(sortBy);
    //displayToc(postFilter);
-} // end toggleTitleSort
+} // end toggleTitleSort//
 
 function toggleDateSort() {
    if (sortBy == "datenewest") { sortBy = "dateoldest"; }
