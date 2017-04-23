@@ -14,7 +14,7 @@
    var tocLoaded = false;           // true if feed is read and ToC can be displayed
    var numChars = 250;              // number of characters in post summary
    var postFilter = '';             // default filter value
-   var tocdiv = document.getElementById("bp_toc"); //web.archive.org/web/20160115102235/https://the toc container
+  // var tocdiv = document.getElementById("bp_toc"); //web.archive.org/web/20160115102235/https://the toc container
    var totalEntires =0; //web.archive.org/web/20160115102235/https://Entries grabbed till now
    var totalPosts =0; //web.archive.org/web/20160115102235/https://Total number of posts in the blog.
 
@@ -103,7 +103,9 @@ function loadtoc(json) {
 			*/
          }
       }
-      if(totalEntires==totalPosts) {tocLoaded=true;showToc();}
+      if(totalEntires==totalPosts) {tocLoaded=true;
+	  //showToc();
+	  }
    } // end of getPostData
 
 // start of showtoc function body
@@ -117,6 +119,7 @@ function loadtoc(json) {
   // sortPosts(sortBy);
    tocLoaded = true;
 }
+
 
 
 
