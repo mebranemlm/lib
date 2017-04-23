@@ -1,6 +1,6 @@
 
 
-   var posts=[];
+   var Posts=[];
 
    var postTitle = new Array();     // array of posttitles
    var postUrl = new Array();       // array of posturls
@@ -92,7 +92,7 @@ function loadtoc(json) {
 				sum:postcontent,
 				labels:pll
 			};
-			posts.push(post);
+			Posts.push(post);
 			/*
             postTitle.push(posttitle);
             postDate.push(postdate);
