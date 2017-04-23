@@ -1,6 +1,7 @@
 
 
    var Posts=[];
+   console.log(1);
 
    var postTitle = new Array();     // array of posttitles
    var postUrl = new Array();       // array of posturls
