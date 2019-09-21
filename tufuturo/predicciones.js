@@ -13,5 +13,12 @@ El dinero que tanto necesitas llegará de manera inesperada, aunque deberá abri
 `,  
 
 
+
+`
+Se acercan nuevas oportunidades para ti, por lo que debes estar atento|atenta a las cosas que pasan a tu alrededor a partir de hoy, ya que te confiarán un proyecto que cambiará por completo tu vida y te permitirá desarrollarte. Estarás en una etapa en la que te interesará explorar cosas nuevas, por ello, probarás nuevas experiencias que te abrirán muchas expectativas y posibilidades de crecimiento personal.  Mantendrás una actitud bastante atractiva que te permitirá encontrar el amor que buscas o fortalecer tu relación de pareja. Deberás cuidarte del clima ya que afectará tu salud. 
+`,  
+
+
+
   
 ]
