@@ -1,4 +1,4 @@
-var lista_predicciones=[
+var predicciones=[
 `
 No deberás preocuparte por un problema que al menos de momento no tiene solución, aunque la paciencia será una gran virtud que te permitirá resurgir, será conveniente que te enfoques en otras propuestas sin perder detalle del progreso. Algunas diferencias con una persona cercana harán que sea una época complicada para los compromisos, esto te mantendrá alejado de tu entorno. En el amor los matices te interesarán, sobre todo con las amistades, por eso hoy estarás muy pendiente de las sensaciones con los demás. Será un día propicio para quedar con esa persona con la que has estado hablando por WhatsApp, el universo propiciará el encuentro, aunque no habrá una gran conexión al instante será conveniente no te fíes de la primera impresión. Buena salud para este mes, tendrás mucha energía. 
 `,
@@ -16,7 +16,7 @@ Se acercan nuevas oportunidades para ti, por lo que debes estar atento|atenta a 
 `,   
 ]
 
-var lista_frases=[
+var frases=[
 `El mundo está lleno de magia que espera pacientemente a que nuestro ingenio se afine.`,
 `Las cosas más nobles y bellas de la vida no están hechas para que escuchemos historias sobre ellas, para leamos acerca de su existencia o para que las veamos, sino que son para ser vividas.`,
 `La felicidad no es la ausencia de problemas sino la capacidad de lidiar con ellos.`,
