@@ -2,9 +2,10 @@
 
 Array.prototype.random = function () {
   var arr = this;
-  return arr.forEach(function () {
+  arr.forEach(function () {
     return arr.sort(function () {
       return .5 - Math.random();
     });
   });
+  return arr;
 };
