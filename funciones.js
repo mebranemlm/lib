@@ -1,9 +1,10 @@
 //ARRAY
 
- Array.prototype.random = function () {
-    return this.forEach(function () {
-        return this.sort(function () {
-            return .5 - Math.random();
-        });
+Array.prototype.random = function () {
+  var arr = this;
+  return arr.forEach(function () {
+    return arr.sort(function () {
+      return .5 - Math.random();
     });
+  });
 };
