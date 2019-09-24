@@ -1,9 +1,35 @@
 var cpa_offers = [
+    {
+        name: "Win New Iphone 11",
+        titles: ["Win New Iphone 11!"],
+        imgs: ["https://i.imgur.com/IIjbtV0.jpg","https://i.imgur.com/WbGa1aI.jpg"],
+        countries: ["US","PE"],
+	o_url:"https://viral481.com/srv.html?id=5481135&pub=951688",
+        url: "http://ito.mx/LCTy",
+        web: "CPALead",
+        user: "liber...",
+        status: "A",
+        type: "email"
+    },
+	/*
+    {
+        name: "",
+        titles: [""],
+        imgs: [""],
+        countries: [""],
+	o_url:"",
+        url: "",
+        web: "CPALead",
+        user: "liber...",
+        status: "A",
+        type: "email"
+    },
+    */
    {
         name: "Sign up to win a $1000 Walmart card",
         titles: ["Sign up to win a $1000 Walmart card!"],
         imgs: ["https://i.imgur.com/DuoFek9.png","https://i.imgur.com/9Jsgflc.jpg"],
-        countries: ["US"],
+        countries: ["US","PE"],
 	o_url:"https://viral481.com/srv.html?id=5481667&pub=951688",
         url: "http://ito.mx/LCTp",
         web: "CPALead",
@@ -15,7 +41,7 @@ var cpa_offers = [
         name: "Completa una encuesta completa para obtener tu recompensa!",
         titles: ["Completa una encuesta para obtener tu recompensa!"],
         imgs: ["https://i.imgur.com/PhX1ekv.jpg", "https://i.imgur.com/axbPXP0.png", "https://i.imgur.com/bxcUBCa.png"],
-        countries: ["MX"],
+        countries: ["MX","PE"],
         url: "http://ito.mx/LCSM",
         web: "CPALead",
         user: "liber...",
