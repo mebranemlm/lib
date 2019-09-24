@@ -15,7 +15,7 @@ var cpa_offers = [
     },
     */
     {
-        name: "Lo Hablas? GANA DINERO - ENCUESTAS",
+        name: "Dinero Por Hablar Espa�ol",
         titles: ["Hablas español? Regístrate gratis y gana hasta 70$ por encuesta!"],
         imgs: ["https://viral481.com/images/campaigns/5481394_120x120.png",
 	       "https://i.imgur.com/lP3UB2K.png",
