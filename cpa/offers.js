@@ -17,10 +17,10 @@ var cpa_offers = [
     {
         name: "Dinero Por Hablar Espa�ol",
         titles: ["Hablas español? Regístrate gratis y gana hasta 70$ por encuesta!"],
-        imgs: ["https://viral481.com/images/campaigns/5481394_120x120.png",
+        imgs: ["https://i.imgur.com/oodwsbb.jpg",
 	       "https://i.imgur.com/lP3UB2K.png",
 	       "https://i.imgur.com/DINlASt.jpg"],
-        countries: ["US","PE"],
+        countries: ["US"],
 	o_url:"https://viral481.com/srv.html?id=5481394&pub=951688",
         url: "http://ito.mx/LCTF",
         web: "CPALead",
