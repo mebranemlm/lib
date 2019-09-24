@@ -3,7 +3,7 @@ var cpa_offers = [
         name: "Sign up to win a $1000 Walmart card",
         titles: ["Sign up to win a $1000 Walmart card!"],
         imgs: ["https://i.imgur.com/DuoFek9.png","https://i.imgur.com/9Jsgflc.jpg"],
-        countries: ["US","PE"],
+        countries: ["US"],
 	o_url:"https://viral481.com/srv.html?id=5481667&pub=951688",
         url: "http://ito.mx/LCTp",
         web: "CPALead",
