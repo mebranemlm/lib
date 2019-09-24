@@ -1,15 +1,28 @@
 var cpa_offers = [
+   {
+        name: "Sign up to win a $1000 Walmart card",
+        titles: ["Sign up to win a $1000 Walmart card!"],
+        imgs: ["https://i.imgur.com/DuoFek9.png","https://i.imgur.com/9Jsgflc.jpg"],
+        countries: ["US","PE"],
+	o_url:"https://viral481.com/srv.html?id=5481667&pub=951688",
+        url: "http://ito.mx/LCTp",
+        web: "CPALead",
+        user: "liber...",
+        status: "A",
+        type: "email"
+    },
     {
         name: "Completa una encuesta completa para obtener tu recompensa!",
         titles: ["Completa una encuesta para obtener tu recompensa!"],
         imgs: ["https://i.imgur.com/PhX1ekv.jpg", "https://i.imgur.com/axbPXP0.png", "https://i.imgur.com/bxcUBCa.png"],
-        countries: ["PE","MX"],
+        countries: ["MX"],
         url: "http://ito.mx/LCSM",
         web: "CPALead",
         user: "liber...",
         status: "A",
         type: "email"
-    }
+    },
+
 ];
 
 
