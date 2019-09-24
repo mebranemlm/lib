@@ -15,13 +15,9 @@ var cpa_offers = [
 
 //// FUNCTIONS
 
-var API = "https://api.ipdata.co/?api-key=test";
-$.ajax({
-  url: API,
-  success: function success(result) {
-    console.log("result", result);
-    var country = result.country_code;
-    console.log(country);
+function cpa_html(country_code){
+    var country=country_code;
+    console.log(country_code);
     var offers = cpa_offers.filter(function (v, i) {
       return v.countries.indexOf(country) != -1 && v.status == "A";
     });
@@ -31,9 +27,7 @@ $.ajax({
       var cpa_img = cpa_offer.imgs.random()[0];
       var html = "<div class=\"cpa_title\">\n\t\t\t\t<b>".concat(cpa_title, " Click aqu\xED:</b>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<a href=\"").concat(cpa_url, "\">\n\t\t\t\t\t<img width=\"100%\" src=\"").concat(cpa_img, "\"></img>\n\t\t\t\t</a>\n\t\t\t</div>");
       $("#cpa" + (i + 1)).html(html);
-    });
-  }
-});
+}
 
 
 /*
