@@ -1,4 +1,4 @@
-var offers = [
+var cpa_offers = [
     {
         name: "Completa una encuesta completa para obtener tu recompensa!",
         titles: ["Completa una encuesta para obtener tu recompensa!"],
