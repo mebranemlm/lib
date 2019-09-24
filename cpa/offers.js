@@ -1,17 +1,6 @@
 var cpa_offers = [
-    {
-        name: "Win New Iphone 11",
-        titles: ["Win New Iphone 11!"],
-        imgs: ["https://i.imgur.com/IIjbtV0.jpg","https://i.imgur.com/WbGa1aI.jpg"],
-        countries: ["US"],
-	o_url:"https://viral481.com/srv.html?id=5481135&pub=951688",
-        url: "http://ito.mx/LCTy",
-        web: "CPALead",
-        user: "liber...",
-        status: "A",
-        type: "email"
-    },
-	/*
+	
+    /*
     {
         name: "",
         titles: [""],
@@ -25,6 +14,34 @@ var cpa_offers = [
         type: "email"
     },
     */
+    {
+        name: "Lo Hablas? GANA DINERO - ENCUESTAS",
+        titles: ["Hablas español? Regístrate gratis y gana hasta 70$ por encuesta!"],
+        imgs: ["https://viral481.com/images/campaigns/5481394_120x120.png",
+	       "https://i.imgur.com/lP3UB2K.png",
+	       "https://i.imgur.com/DINlASt.jpg"],
+        countries: ["US"],
+	o_url:"https://viral481.com/srv.html?id=5481394&pub=951688",
+        url: "http://ito.mx/LCTF",
+        web: "CPALead",
+        user: "liber...",
+        status: "A",
+        type: "email"
+    },
+	
+    {
+        name: "Win New Iphone 11",
+        titles: ["Win New Iphone 11!"],
+        imgs: ["https://i.imgur.com/IIjbtV0.jpg","https://i.imgur.com/WbGa1aI.jpg"],
+        countries: ["US"],
+	o_url:"https://viral481.com/srv.html?id=5481135&pub=951688",
+        url: "http://ito.mx/LCTy",
+        web: "CPALead",
+        user: "liber...",
+        status: "A",
+        type: "email"
+    },
+
    {
         name: "Sign up to win a $1000 Walmart card",
         titles: ["Sign up to win a $1000 Walmart card!"],
