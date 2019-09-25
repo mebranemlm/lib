@@ -1,8 +1,8 @@
  var fb_likes = [
-"desnudandola",
+//"desnudandola", //banned
 //"Antonio-Piñero-II-Página-oficial-815697295137995",
-"JesusHistorico",
-"CarldeGreasse",
+//"JesusHistorico",
+//"CarldeGreasse",
 //"CdeCiencia",
 //"latinoshield",
 //"ArrowversoDC",
@@ -19,7 +19,7 @@
 "https://www.gatapop.com/modelo/fernanda-abraao/",
 //"http://kateelife.com/", //banned
 //"https://www.youtube.com/watch?v=q9ZNI6f567c", //kandor reto mr...
-"http://contra-molinosdeviento.blogspot.com/2011/05/la-evolucion-explicada-creacionistas.html",
+//"http://contra-molinosdeviento.blogspot.com/2011/05/la-evolucion-explicada-creacionistas.html",
 "https://www.instagram.com/p/BL9Fk7yhmbr/", //dln
 "https://dln.la/", 
 //"https://www.youtube.com/watch?v=9aNK0fQfd5I", //Vary Ingweion
