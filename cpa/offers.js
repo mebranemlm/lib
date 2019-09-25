@@ -70,7 +70,7 @@ function cpa_html(country_code) {
     var cpa_title = cpa_offer.titles.random()[0];
     var cpa_url = cpa_offer.url;
     var cpa_img = cpa_offer.imgs.random()[0];
-    var html = "<div class=\"cpa_title\">\n\t\t\t\t<b><a href=\"".concat(cpa_url, "\">").concat(cpa_title, " Click aqu\xED:</a></b>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<a href=\"").concat(cpa_url, "\">\n\t\t\t\t\t<img width=\"100%\" src=\"").concat(cpa_img, "\"></img>\n\t\t\t\t</a>\n\t\t\t</div>");
+    var html = "<div class=\"cpa_title\">\n\t\t\t\t<b><a href=\"".concat(cpa_url, "\">").concat(cpa_title, "</a></b>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<a href=\"").concat(cpa_url, "\">\n\t\t\t\t\t<img width=\"100%\" src=\"").concat(cpa_img, "\"></img>\n\t\t\t\t</a>\n\t\t\t</div>");
     $("#cpa" + (i + 1)).html(html);
   });
 }
