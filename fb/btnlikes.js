@@ -45,4 +45,4 @@ if(!num) num = 3
   $("#likebtns").html("<center>***</center><br/><center>Dale click a los botones azules \"me gusta\" que aparecen abajo:</center><br/>\n<center>".concat(html, "</center>"));
 }
 
-dolikes(3);
+//dolikes(3);
