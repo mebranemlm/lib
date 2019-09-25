@@ -59,7 +59,7 @@ var cpa_offers = [
         titles: ["Completa una encuesta para obtener tu recompensa!"],
         imgs: ["https://i.imgur.com/PhX1ekv.jpg", "https://i.imgur.com/axbPXP0.png", "https://i.imgur.com/bxcUBCa.png"],
         countries: ["MX"],
-        url: "http://ito.mx/LCSM",
+        url: "http://tiny.cc/vqfedz",
         web: "CPALead",
         user: "liber...",
         status: "A",
