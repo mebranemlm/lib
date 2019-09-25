@@ -1,7 +1,4 @@
-function dolikes(num) {
-if(!num) num = 3
-
-  var fb_likes = [
+ var fb_likes = [
 "desnudandola",
 //"Antonio-Piñero-II-Página-oficial-815697295137995",
 "JesusHistorico",
@@ -28,6 +25,10 @@ if(!num) num = 3
 //"https://www.youtube.com/watch?v=9aNK0fQfd5I", //Vary Ingweion
 "https://www.instagram.com/p/BzH2IR0D1qL/", //Lety
 ];
+
+
+function dolikes(num) {
+if(!num) num = 3
   var html = "";
   fb_likes.random().slice(0, num).forEach(function (like, i) {
     if (!like.includes("//")) like = "https://www.facebook.com/" + like;
