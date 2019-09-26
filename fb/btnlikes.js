@@ -1,18 +1,18 @@
  var fb_likes = [
 //"desnudandola", //banned
 //"Antonio-Piñero-II-Página-oficial-815697295137995",
-//"JesusHistorico",
+"JesusHistorico",
 //"CarldeGreasse",
 //"CdeCiencia",
 //"latinoshield",
 //"ArrowversoDC",
-//"TitansLat",
+"TitansLat",
 //"LuciferLatinoamerica",
 //"The-100-Latinoamerica-1532932343619252",
 //"SupernaturalLatinoamerica",
 "jehova.org", 
-//"supermanjaviolivares", 
-//"lapulgasnob", 
+"supermanjaviolivares", 
+"lapulgasnob", 
 "LetyDoesStuff",
 
 //web posts
