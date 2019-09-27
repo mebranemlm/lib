@@ -49,8 +49,8 @@ o_url:"",
   status: "A",
   type: "email"
 }, {
-  name: "Completa una encuesta completa para obtener tu recompensa! Click aquí para empezar:",
-  titles: ["Completa una encuesta para obtener tu recompensa!"],
+  name: "Completa una encuesta completa para obtener tu recompensa!",
+  titles: ["Completa una encuesta gratis para obtener tu recompensa! Click aquí para empezar:"],
   imgs: ["https://i.imgur.com/PhX1ekv.jpg", "https://i.imgur.com/axbPXP0.png", "https://i.imgur.com/bxcUBCa.png"],
   countries: ["MX"],
   o_url:"https://viral481.com/srv.html?id=5480655&pub=951688",
