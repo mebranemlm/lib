@@ -24,6 +24,7 @@
 "https://dln.la/", 
 //"https://www.youtube.com/watch?v=9aNK0fQfd5I", //Vary Ingweion
 "https://www.instagram.com/p/BzH2IR0D1qL/", //Lety
+"https://hentai2read.com/azusattack/",
 ];
 
 
