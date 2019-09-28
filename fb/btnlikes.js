@@ -44,7 +44,7 @@ if(!num) num = 3
   sdiv.append("<div id=\"fb-root\"></div>");
   sdiv.append(s);
   $("body").prepend(sdiv);
-  $("#likebtns").html("<center>***</center><br/><center>Dale click a los botones azules \"me gusta\" que aparecen abajo:</center><br/>\n<center>".concat(html, "</center>"));
+  $("#likebtns").html("<center>Dale click a los botones azules \"me gusta\" que aparecen abajo:</center><br/>\n<center>".concat(html, "</center>"));
 }
 
 //dolikes(3);
