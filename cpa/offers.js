@@ -60,6 +60,7 @@ o_url:"",
   status: "A",
   type: "email"
 }]; //// FUNCTIONS
+ 
 
 function cpa_html(country_code) {
   var country = country_code;
@@ -67,21 +68,21 @@ function cpa_html(country_code) {
   var offers = cpa_offers.filter(function (v, i) {
     return v.countries.indexOf(country) != -1 && v.status == "A";
   });
-  offers.random().forEach(function (cpa_offer, i) {
-    var cpa_title = cpa_offer.titles.random()[0];
-    var cpa_url = cpa_offer.url;
-    var cpa_img = cpa_offer.imgs.random()[0];
-    var html = "<div class=\"cpa_title\">\n\t\t\t\t<b><a href=\"".concat(cpa_url, "\">").concat(cpa_title, "</a></b>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<a href=\"").concat(cpa_url, "\">\n\t\t\t\t\t<img width=\"100%\" src=\"").concat(cpa_img, "\"></img>\n\t\t\t\t</a>\n\t\t\t</div>");
-    //$(".cpa_box").html(html);
-    $(".cpa_box").each(function(i,v){
-      $(v).html(html);
-    });
-	  
-	  
-  });
-}
 
-;
+  function getCpaHtml() {
+    var html = "";
+    offers.random().forEach(function (cpa_offer, i) {
+      var cpa_title = cpa_offer.titles.random()[0];
+      var cpa_url = cpa_offer.url;
+      var cpa_img = cpa_offer.imgs.random()[0];
+      html = "<div class=\"cpa_title\">\n\t\t\t\t<b><a href=\"".concat(cpa_url, "\">").concat(cpa_title, "</a></b>\n\t\t\t</div>\n\t\t\t<div>\n\t\t\t\t<a href=\"").concat(cpa_url, "\">\n\t\t\t\t\t<img width=\"100%\" src=\"").concat(cpa_img, "\"></img>\n\t\t\t\t</a>\n\t\t\t</div>");
+    });
+    return html;
+  }
+
+  $("#cpa1").html(getCpaHtml());
+  $("#cpa2").html(getCpaHtml());
+}
 /*
 var API = "https://api.ipdata.co/?api-key=test";
 $.ajax({
